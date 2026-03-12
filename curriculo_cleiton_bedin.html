@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo – Cleiton Bedin | Especialista em RPA & Hiperautomação</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #0f62fe;
+      --accent-2: #0043ce;
+      --accent-3: #a6c8ff;
+      --dark: #0a0f1e;
+      --dark-2: #111827;
+      --dark-3: #1e2a3b;
+      --surface: #172035;
+      --surface-2: #1e3050;
+      --border: rgba(166, 200, 255, 0.15);
+      --text: #e8f0fe;
+      --text-muted: #8eaacb;
+      --tag-bg: rgba(15, 98, 254, 0.18);
+      --tag-border: rgba(15, 98, 254, 0.45);
+      --gold: #f5c518;
+      --green: #24c08a;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      font-size: 13.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── PAGE SHELL ─── */
+    .page {
+      max-width: 940px;
+      margin: 40px auto;
+      background: var(--dark-2);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px var(--border),
+        0 40px 120px rgba(0, 0, 0, 0.7),
+        0 0 80px rgba(15, 98, 254, 0.08);
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      position: relative;
+      padding: 52px 56px 44px;
+      background: linear-gradient(135deg, #0d1b35 0%, #0a1628 50%, #071020 100%);
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 80% at 90% -20%, rgba(15, 98, 254, 0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at -10% 110%, rgba(0, 67, 206, 0.18) 0%, transparent 60%);
+    }
+
+    .header-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(15, 98, 254, 0.15);
+      border: 1px solid rgba(15, 98, 254, 0.4);
+      border-radius: 100px;
+      padding: 4px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-3);
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    .header-badge span {
+      font-size: 14px;
+    }
+
+    .name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .name em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent) 0%, #5da3fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.5;
+      max-width: 580px;
+    }
+
+    .title strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* contact */
+    .contact-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .contact-item svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-3);
+    }
+
+    /* header highlights */
+    .highlights {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .highlight-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .highlight-pill .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* ─── BODY / PDF PAGES ─── */
+    .pdf-page {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+    }
+
+    .pdf-page.pdf-page-2,
+    .pdf-page.pdf-page-3 {
+      border-top: 1px solid var(--border);
+    }
+
+    .pdf-page-2 .main-col,
+    .pdf-page-2 .side-col,
+    .pdf-page-3 .main-col,
+    .pdf-page-3 .side-col,
+    .pdf-page-4 .main-col,
+    .pdf-page-4 .side-col {
+      padding-top: 36px;
+    }
+
+    .main-col {
+      padding: 40px 44px 48px;
+      border-right: 1px solid var(--border);
+    }
+
+    .side-col {
+      padding: 36px 32px 48px;
+      background: var(--dark-3);
+    }
+
+    /* ─── SECTION ─── */
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+    }
+
+    /* ─── SUMMARY ─── */
+    .summary {
+      font-size: 13.5px;
+      color: var(--text);
+      line-height: 1.75;
+      padding: 18px 20px;
+      background: rgba(15, 98, 254, 0.07);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    /* ─── EXPERIENCE ─── */
+    .exp-item {
+      margin-bottom: 26px;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+
+    .exp-role {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .exp-company {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--accent-3);
+      margin-top: 2px;
+    }
+
+    .exp-company em {
+      font-style: normal;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-left: 6px;
+      font-size: 12px;
+    }
+
+    .exp-period {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 3px 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-items {
+      margin-top: 10px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .exp-items li {
+      font-size: 12.5px;
+      color: #b0c4de;
+      line-height: 1.55;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .exp-items li::before {
+      content: '▸';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 11px;
+    }
+
+    .exp-items li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .exp-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
+
+    /* tech bar */
+    .exp-tech-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .exp-tech-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+
+    /* KPI bar */
+    .kpi-bar {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .kpi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      min-width: 80px;
+    }
+
+    .kpi-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+
+    .kpi-label {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* ─── PROJECT CARD ─── */
+    .proj-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .proj-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), #5da3fd, var(--green));
+    }
+
+    .proj-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .proj-icon {
+      font-size: 24px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .proj-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      flex: 1;
+    }
+
+    .proj-name em {
+      font-style: normal;
+      color: var(--accent-3);
+    }
+
+    .proj-meta {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .proj-desc {
+      font-size: 12.5px;
+      color: #b0c4de;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .proj-modules {
+      margin-bottom: 14px;
+    }
+
+    .proj-module-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .proj-modules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 12px;
+    }
+
+    .proj-module {
+      font-size: 12px;
+      color: var(--text);
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .proj-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    /* ─── SIDE SECTION ─── */
+    .side-section {
+      margin-bottom: 28px;
+    }
+
+    .side-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .side-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* skills */
+    .skill-group {
+      margin-bottom: 14px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      margin-bottom: 7px;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 100px;
+      font-size: 9.5px;
+      font-weight: 500;
+      color: var(--accent-3);
+      white-space: nowrap;
+    }
+
+    .tag.featured {
+      background: rgba(15, 98, 254, 0.3);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .tag.green {
+      background: rgba(36, 192, 138, 0.12);
+      border-color: rgba(36, 192, 138, 0.4);
+      color: var(--green);
+    }
+
+    /* education */
+    .edu-item {
+      margin-bottom: 14px;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-degree {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .edu-school {
+      font-size: 11.5px;
+      color: var(--accent-3);
+      margin-top: 2px;
+      font-weight: 600;
+    }
+
+    .edu-period {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* lang */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .lang-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .lang-level {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .lang-bar {
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .lang-fill {
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    /* ─── PAGE MARGINS (must be at root level, not inside @media) ─── */
+    @page {
+      margin: 20mm 14mm;
+    }
+
+    /* ─── PRINT ─── */
+    /* ─── PAGE BREAK ─── */
+    .page-break {
+      position: relative;
+      margin: 32px -44px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .page-break::before,
+    .page-break::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: repeating-linear-gradient(90deg,
+          var(--border) 0px,
+          var(--border) 6px,
+          transparent 6px,
+          transparent 12px);
+    }
+
+    .page-break-label {
+      padding: 2px 12px;
+      background: var(--dark-2);
+      border: 1px dashed rgba(166, 200, 255, 0.25);
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    @media print {
+      body {
+        background: white;
+        font-size: 11.5px;
+      }
+
+      .page {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .header {
+        background: #0a1628 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .side-col {
+        background: #1e2a3b !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      /* Gradient text não renderiza em PDF — usar cor sólida */
+      .name em {
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        background-clip: unset !important;
+        -webkit-text-fill-color: #4a9eff !important;
+        color: #4a9eff !important;
+      }
+
+      /* Each pdf-page forces a new print page */
+      .pdf-page-2,
+      .pdf-page-3,
+      .pdf-page-4 {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      /* Don't stretch columns — avoids empty dark area at bottom of page */
+      .pdf-page {
+        align-items: start;
+      }
+
+      /* Pages 2, 3, 4: pad both columns at the top */
+      .pdf-page-2 .main-col,
+      .pdf-page-2 .side-col,
+      .pdf-page-3 .main-col,
+      .pdf-page-3 .side-col,
+      .pdf-page-4 .main-col,
+      .pdf-page-4 .side-col {
+        padding-top: 18mm;
+      }
+
+      /* Page breaks */
+      .page-break {
+        break-after: page;
+        page-break-after: always;
+        height: 0;
+        margin: 0;
+        visibility: hidden;
+      }
+
+      .exp-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .proj-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .kpi-bar {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .side-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      /* Compact layout to fit Experiência on one page */
+      .exp-item {
+        margin-bottom: 14px !important;
+      }
+
+      .exp-divider {
+        margin: 10px 0 !important;
+      }
+
+      .kpi {
+        padding: 6px 10px !important;
+        min-width: 60px !important;
+      }
+
+      .kpi-value {
+        font-size: 15px !important;
+      }
+
+      .kpi-label {
+        font-size: 9px !important;
+      }
+
+      .kpi-bar {
+        gap: 6px !important;
+        margin-top: 8px !important;
+      }
+
+      .exp-tech-bar {
+        margin-top: 8px !important;
+        padding-top: 6px !important;
+      }
+
+      .exp-items {
+        gap: 3px !important;
+      }
+
+      .exp-items li {
+        font-size: 11.5px !important;
+        line-height: 1.4 !important;
+      }
+
+      .section {
+        margin-bottom: 20px !important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .body {
+        grid-template-columns: 1fr;
+      }
+
+      .side-col {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .header-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-stack {
+        align-items: flex-start;
+      }
+
+      .name {
+        font-size: 30px;
+      }
+
+      .main-col {
+        padding: 28px 24px;
+      }
+
+      .side-col {
+        padding: 28px 24px;
+      }
+
+      .header {
+        padding: 36px 24px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header">
+      <div class="header-grid">
+        <div>
+          <div class="header-badge">
+            <span>🤖</span> Especialista em RPA &amp; Hiperautomação
+          </div>
+          <div class="name">Cleiton <em>Bedin</em></div>
+          <div class="title">
+            <strong>Automation Anywhere · Power Automate Desktop · Python · SAP</strong><br>
+            Integração de sistemas · Mapeamento BPMN · Inteligência Artificial aplicada a processos
+          </div>
+          <div class="highlights">
+            <div class="highlight-pill"><span class="dot"></span>+3.000 horas/mês automatizadas</div>
+            <div class="highlight-pill"><span class="dot"></span>SLA robôs &gt; 99%</div>
+            <div class="highlight-pill"><span class="dot"></span>15+ anos em TI corporativa</div>
+          </div>
+        </div>
+        <div class="contact-stack">
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.61 5.61l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            (16) 99227-0472
+          </div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:cleiton.bedin@flowbytedigital.com.br">cleiton.bedin@flowbytedigital.com.br</a>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <a href="https://www.linkedin.com/in/cleitonbedin" target="_blank">linkedin.com/in/cleitonbedin</a>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Brasil (Remoto)
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══ PDF PAGE 1 ═══ -->
+    <div class="pdf-page pdf-page-1">
+
+      <main class="main-col">
+        <!-- PERFIL -->
+        <section class="section">
+          <div class="section-title">Perfil Profissional</div>
+          <div class="summary">
+            Especialista em <strong>Hiperautomação</strong> com mais de 15 anos de experiência em TI corporativa e ampla
+            atuação em projetos de <strong>RPA, Inteligência Artificial e integrações sistêmicas</strong>. Liderou o
+            portfólio de RPA na Biosev por 4 anos, entregando automações com <strong>SLA acima de 99%</strong> e volume
+            superior a <strong>3.000 horas/mês</strong> automatizadas — com forte integração a <strong>SAP, TOTVS,
+              sistemas fiscais e governamentais</strong>. Combina visão de negócio, domínio técnico e gestão de projetos
+            ágeis para entregar automações escaláveis e de alto impacto.
+          </div>
+        </section>
+      </main>
+
+      <aside class="side-col">
+        <!-- FERRAMENTAS RPA -->
+        <div class="side-section">
+          <div class="side-title">🔧 Ferramentas RPA</div>
+          <div class="skill-group">
+            <div class="tag-cloud">
+              <span class="tag featured">Automation Anywhere</span>
+              <span class="tag featured">Power Automate Desktop</span>
+              <span class="tag featured">Python (automação)</span>
+              <span class="tag">UiPath</span>
+              <span class="tag">Blue Prism</span>
+              <span class="tag">Selenium/WebDriver</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- INTEGRAÇÃO SAP -->
+        <div class="side-section">
+          <div class="side-title">🔗 Integração &amp; Sistemas</div>
+          <div class="tag-cloud">
+            <span class="tag featured">SAP</span>
+            <span class="tag featured">TOTVS</span>
+            <span class="tag">APIs REST</span>
+            <span class="tag">ERPs legados</span>
+            <span class="tag">Portais gov.</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">Office 365</span>
+            <span class="tag">ITSM</span>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- ═══ PDF PAGE 2 ═══ -->
+    <div class="pdf-page pdf-page-2">
+
+      <main class="main-col">
+        <!-- EXPERIÊNCIA -->
+        <section class="section">
+          <div class="section-title">Experiência Profissional</div>
+
+          <!-- Consultoria -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Consultor de TI &amp; Automação | Hiperautomação | IA</div>
+                <div class="exp-company">Consultoria Independente <em>· Remoto</em></div>
+              </div>
+              <div class="exp-period">Jul 2025 – Fev 2026</div>
+            </div>
+            <ul class="exp-items">
+              <li>Diagnóstico e <strong>mapeamento de processos BPMN</strong> para identificação de oportunidades de
+                automação;</li>
+              <li>Desenho de <strong>soluções de hiperautomação</strong> combinando RPA, IA e integrações sistêmicas
+                (APIs, ERPs);</li>
+              <li>Implementação de automações para processos administrativos, fiscais e operacionais;</li>
+              <li>Interface entre áreas de negócio e times técnicos para alinhamento de escopo e entrega de valor;</li>
+              <li>Apoio à tomada de decisão via dados e automações orientadas a regras de negócio.</li>
+            </ul>
+          </div>
+
+          <div class="exp-divider"></div>
+
+          <!-- Raizen -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Analista de Sistemas Sr. | Product Owner</div>
+                <div class="exp-company">Raízen <em>· Remoto</em></div>
+              </div>
+              <div class="exp-period">Abr 2022 – Jul 2025</div>
+            </div>
+            <ul class="exp-items">
+              <li>Gestão de projetos e demandas em <strong>metodologias ágeis (Scrum/Kanban)</strong>, da concepção à
+                operação assistida;</li>
+              <li>Interface contínua com stakeholders, alinhamento de escopo, validação de requisitos funcionais e
+                homologação;</li>
+              <li>Coordenação de equipes multidisciplinares (dev, infra, arquitetura, segurança, DevOps);</li>
+              <li>Modelagem de processos (BPMN), documentação funcional/técnica e apoio a testes com k-users;</li>
+              <li>Atuação na área de <strong>Distribuição de Combustíveis</strong>, com soluções para atendimento a
+                clientes e parceiros.</li>
+            </ul>
+          </div>
+
+        </section>
+      </main>
+
+      <aside class="side-col">
+        <!-- IA & DADOS -->
+        <div class="side-section">
+          <div class="side-title">🧠 IA &amp; Dados</div>
+          <div class="tag-cloud">
+            <span class="tag green">Hiperautomação</span>
+            <span class="tag green">IA aplicada a processos</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Power BI</span>
+          </div>
+        </div>
+
+        <!-- PROCESSOS & GESTÃO -->
+        <div class="side-section">
+          <div class="side-title">📊 Processos &amp; Gestão</div>
+          <div class="tag-cloud">
+            <span class="tag">BPMN</span>
+            <span class="tag">Scrum / Kanban</span>
+            <span class="tag">Product Owner</span>
+            <span class="tag">Gestão de portfólio</span>
+            <span class="tag">Análise de requisitos</span>
+            <span class="tag">Stakeholders</span>
+            <span class="tag">Gestão de SLA</span>
+          </div>
+        </div>
+
+        <!-- FORMAÇÃO -->
+        <div class="side-section">
+          <div class="side-title">🎓 Formação Acadêmica</div>
+          <div class="edu-item">
+            <div class="edu-degree">MBA em Data Science &amp; Analytics</div>
+            <div class="edu-school">USP / Esalq</div>
+            <div class="edu-period">2021 – 2022</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Especialização em Governança de TI</div>
+            <div class="edu-school">SENAC/MS</div>
+            <div class="edu-period">2009 – 2010</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Bacharelado em Sistemas de Informação</div>
+            <div class="edu-school">UNOESC/SC</div>
+            <div class="edu-period">2002 – 2006</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ═══ PDF PAGE 3 — Biosev ═══ -->
+    <div class="pdf-page pdf-page-3">
+
+      <main class="main-col">
+        <section class="section">
+          <div class="section-title">Experiência Profissional (cont.)</div>
+
+          <!-- Biosev Coord RPA -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Coordenador de Automação de Processos</div>
+                <div class="exp-company">Biosev (Louis Dreyfus Group) <em>· Remoto</em></div>
+              </div>
+              <div class="exp-period">Abr 2018 – Mar 2022</div>
+            </div>
+            <div class="kpi-bar">
+              <div class="kpi">
+                <div class="kpi-value">3K+</div>
+                <div class="kpi-label">horas/mês<br>automatizadas</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-value">99%+</div>
+                <div class="kpi-label">SLA dos<br>robôs</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-value">4 anos</div>
+                <div class="kpi-label">portfólio<br>RPA gerido</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-value">SAP</div>
+                <div class="kpi-label">integração<br>principal</div>
+              </div>
+            </div>
+            <ul class="exp-items" style="margin-top:14px">
+              <li>Gestão do portfólio de projetos RPA: planejamento, execução, entrega e evolução contínua dos robôs;
+              </li>
+              <li><strong>Faturamento Fiscal:</strong> automação end-to-end de vendas (açúcar, etanol, resíduos) com
+                integração <strong>SAP, TOTVS</strong>, geração de laudos e lançamentos fiscais;</li>
+              <li><strong>Recebimento Fiscal:</strong> download, validação e lançamento automático de XMLs/NFs,
+                integração com sistemas do governo e regras fiscais complexas;</li>
+              <li><strong>Gestão de Acessos TI:</strong> automação de provisionamento em <strong>Active Directory,
+                  Office 365, ITSM, VPN e Wi-Fi</strong>;</li>
+              <li>Coordenação entre áreas de negócio e times técnicos garantindo qualidade, prazos e alinhamento
+                corporativo.</li>
+            </ul>
+            <div class="exp-tech-bar">
+              <span class="exp-tech-label">Tecnologia</span>
+              <span class="tag featured">UiPath</span>
+              <span class="tag">SAP GUI Scripting</span>
+              <span class="tag">TOTVS</span>
+              <span class="tag">Python</span>
+              <span class="tag">VB Script</span>
+            </div>
+          </div>
+
+          <div class="exp-divider"></div>
+
+          <!-- Biosev Coord TI -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Coordenador de Suporte de TI</div>
+                <div class="exp-company">Biosev <em>· Sertãozinho/SP</em></div>
+              </div>
+              <div class="exp-period">Abr 2010 – Mar 2018</div>
+            </div>
+            <ul class="exp-items">
+              <li>Gestão de equipe de suporte, orçamento (budget) e compliance com políticas corporativas de TI;</li>
+              <li>Coordenação de projetos de <strong>automação (RPA)</strong> e inteligência de negócios (BI) para
+                otimização operacional;</li>
+              <li>Monitoramento contínuo de performance com ações corretivas e preventivas (SLA).</li>
+            </ul>
+          </div>
+
+        </section>
+      </main>
+
+      <aside class="side-col">
+        <!-- IDIOMAS -->
+        <div class="side-section">
+          <div class="side-title">🌐 Idiomas</div>
+          <div class="lang-item" style="flex-direction:column; align-items:flex-start;">
+            <div style="display:flex;justify-content:space-between;width:100%;">
+              <span class="lang-name">Inglês</span>
+              <span class="lang-level">Full Professional</span>
+            </div>
+            <div class="lang-bar" style="width:100%;margin-top:6px;">
+              <div class="lang-fill" style="width:85%;background:linear-gradient(90deg,var(--accent),#5da3fd);"></div>
+            </div>
+          </div>
+          <div class="lang-item" style="flex-direction:column; align-items:flex-start; margin-top:10px;">
+            <div style="display:flex;justify-content:space-between;width:100%;">
+              <span class="lang-name">Português</span>
+              <span class="lang-level">Nativo</span>
+            </div>
+            <div class="lang-bar" style="width:100%;margin-top:6px;">
+              <div class="lang-fill" style="width:100%;background:linear-gradient(90deg,var(--green),#34e0a1);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIFERENCIAIS -->
+        <div class="side-section">
+          <div class="side-title">⭐ Diferenciais</div>
+          <ul class="exp-items" style="gap:8px;">
+            <li>Automações fiscais com integração <strong>SAP + TOTVS</strong></li>
+            <li>Gestão de robôs em produção com alto volume e SLA rigoroso</li>
+            <li>Visão end-to-end: negócio → processo → automação</li>
+            <li>Experiência em grandes empresas do agronegócio e energia</li>
+            <li>Atuação remota consolidada desde 2018</li>
+            <li>MBA USP com foco em dados e analytics</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ═══ PDF PAGE 4 ═══ -->
+    <div class="pdf-page pdf-page-4">
+
+      <main class="main-col">
+        <!-- PROJETOS DE DESENVOLVIMENTO -->
+        <section class="section">
+          <div class="section-title">Projetos de Desenvolvimento</div>
+
+          <!-- MAPA -->
+          <div class="proj-card">
+            <div class="proj-header">
+              <div>
+                <div class="proj-name">Sistema de Gestão Escolar — <em>MAPA ERP</em></div>
+                <div class="proj-meta">Desenvolvimento Full Stack · Projeto Independente · 2025 – 2026</div>
+              </div>
+              <div class="exp-period" style="align-self:flex-start;">Em produção</div>
+            </div>
+            <p class="proj-desc">
+              Concepção, arquitetura e desenvolvimento completo de um <strong>ERP escolar multitenant</strong>,
+              projetado para atender todas as demandas e setores de entidades de ensino — da secretaria acadêmica
+              à gestão financeira, comunicação e ponto dos colaboradores.
+            </p>
+            <div class="proj-modules">
+              <div class="proj-module-title">Módulos entregues</div>
+              <div class="proj-modules-grid">
+                <div class="proj-module">📅 Agenda &amp; Calendário Acadêmico</div>
+                <div class="proj-module">📋 Secretaria &amp; Matrículas</div>
+                <div class="proj-module">💰 Financeiro &amp; Cobranças</div>
+                <div class="proj-module">🕐 Gestão de Ponto (RH)</div>
+                <div class="proj-module">📦 Estoque &amp; Patrimônio</div>
+                <div class="proj-module">📣 Comunicados &amp; Portal</div>
+                <div class="proj-module">🔐 Controle de Acesso &amp; Permissões</div>
+                <div class="proj-module">📊 Relatórios &amp; Dashboard</div>
+              </div>
+            </div>
+            <div class="proj-tech">
+              <span class="tag">Python / FastAPI</span>
+              <span class="tag">React.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Multi-tenant</span>
+              <span class="tag">PWA</span>
+            </div>
+          </div>
+
+        </section>
+      </main>
+
+      <aside class="side-col">
+
+        <!-- STACK TÉCNICA -->
+        <div class="side-section">
+          <div class="side-title">🛠️ Stack Técnica</div>
+          <div class="tag-cloud">
+            <span class="tag featured">Python</span>
+            <span class="tag featured">FastAPI</span>
+            <span class="tag featured">React.js</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Git</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+
+        <!-- METODOLOGIA -->
+        <div class="side-section">
+          <div class="side-title">📐 Metodologia</div>
+          <div class="tag-cloud">
+            <span class="tag">Clean Architecture</span>
+            <span class="tag">Multi-tenant SaaS</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">PWA</span>
+            <span class="tag">Domain-Driven</span>
+          </div>
+        </div>
+
+        <!-- DISPONIBILIDADE -->
+        <div class="side-section">
+          <div class="side-title">📬 Disponibilidade</div>
+          <ul class="exp-items" style="gap:8px;">
+            <li>Projetos de automação remoto</li>
+            <li>Início imediato</li>
+            <li>CLT ou PJ</li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+
+  </div>
+</body>
+
+</html>
